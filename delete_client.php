@@ -8,15 +8,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
     $stmt = $pdo->prepare("SELECT id FROM clients WHERE id = ?");
     $stmt->execute([$id]);
     if(!$stmt->fetch()) {
-        echo json_encode(["error" => "Klijent ne postoji!"]);
+        echo json_encode(["error" => "Client does not exist!"]);
         exit;
     }
 
     $stmt = $pdo->prepare("DELETE FROM clients WHERE id = ?");
     $success = $stmt->execute([$id]);
     if($success) {
-        echo json_encode(["success" => "Klijent je uspesno obrisan iz baze!"]);
+        echo json_encode(["success" => "Client has been successfully deleted from the database!"]);
     } else {
-        echo json_encode(["error" => "Doslo je do greske, klijent nije obrisan!"]);
+        echo json_encode(["error" => "Error occurred, the client was not deleted!"]);
     }
 }

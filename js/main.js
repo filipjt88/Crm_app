@@ -1,3 +1,5 @@
+
+// Load clients
 function loadClients() {
     fetch('get_clients.php')
         .then(response => response.json())
@@ -18,10 +20,10 @@ function loadClients() {
                 tableBody.innerHTML += table;
             });
         })
-        .catch(error => console.error("Greska pri ucitavanju podataka!", error));
+        .catch(error => console.error("Error loading data!", error));
 }
 
-
+// Delete client
 function deleteClient(id) {
     if (confirm("Are you sure you want to delete this client?")) {
         fetch('delete_client.php', {
@@ -38,7 +40,7 @@ function deleteClient(id) {
                     alert(data.error);
                 }
             })
-            .catch(error => console.error('Greska, klijent nije obrisan!', error));
+            .catch(error => console.error('Error, client not deleted!', error));
     }
 }
 window.onload = loadClients;
