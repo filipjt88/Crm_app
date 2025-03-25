@@ -5,7 +5,7 @@ function loadClients() {
             let tableBody = document.getElementById("clientsTable");
             tableBody.innerHTML = '';
             data.forEach(client => {
-                let row = `
+                let table = `
                     <tr>
                         <td>${client.first_name}</td>
                         <td>${client.last_name}</td>
@@ -14,7 +14,7 @@ function loadClients() {
                         <td>${client.notes}</td>
                     </tr>
                 `;
-                tableBody.innerHTML += row;
+                tableBody.innerHTML += table;
             });
         })
         .catch(error => console.error("Greska pri ucitavanju podataka!", error));
