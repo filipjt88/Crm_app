@@ -14,6 +14,7 @@ function loadClients() {
                         <td>${client.email}</td>
                         <td>${client.phone}</td>
                         <td>${client.notes}</td>
+                        <td><button class="btn-sm btn btn-warning" onclick="editClient(${client.id}, '${client.first_name}', '${client.last_name}', '${client.email}', '${client.phone}', '${client.notes}')">Update</button></td>
                         <td><button class="btn btn-danger btn-sm" onclick="deleteClient(${client.id})">Delete</button></td>
                     </tr>
                 `;
