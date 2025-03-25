@@ -1,4 +1,4 @@
 <?php
 
 require './core/db.php';
-echo "Uspesno povezan sa bazom!";
+echo "Success connection to database!";
