@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-9 offset-1 mt-5">
                 <h1 class="text-center mb-5">Update client</h1>
-                <form id="updateForm" action="./add_client.php" method="POST">
+                <form id="updateForm" method="POST">
                     <input type="hidden" id="clientId">
                     <input type="text" id="firstName" name="first_name" class="form-control" placeholder="First name ..." required><br>
                     <input type="text" id="lastName" name="last_name" class="form-control" placeholder="Last name ..." required><br>

@@ -1,7 +1,7 @@
 
 // Load clients
 function loadClients() {
-    fetch('./get_clients.php')
+    fetch('get_clients.php')
         .then(response => response.json())
         .then(data => {
             let tableBody = document.getElementById("clientsTable");
@@ -64,7 +64,7 @@ function editClient(id, firstName, lastName, email, phone, notes) {
         let notes = document.getElementById('notes').value;
 
 
-        fetch('./update_client.php', {
+        fetch('update_client.php', {
             method: "POST",
             headers: { "Content-Type": 'application/x-www-form-urencoded' },
             body: `id=${id}&first_name=${firstName}&last_name=${lastName}&email=${email}&phone=${phone}&notes=${notes}`
