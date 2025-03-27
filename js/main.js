@@ -9,9 +9,9 @@ function loadClients() {
             data.forEach(client => {
                 let table = `
                     <tr>
-                        <td>${client.first_name}</td>
+                        <td>${client.first_name}</td> 
                         <td>${client.last_name}</td>
-                        <td>${client.email}</td>
+                        <td>${client.email}</td>3
                         <td>${client.phone}</td>
                         <td>${client.notes}</td>
                         <td><a href="./views/update_client.view.php" class="link-opacity-10" href="#"><button class="btn-sm btn btn-warning" onclick="editClient(${client.id}, '${client.first_name}', '${client.last_name}', '${client.email}', '${client.phone}', '${client.notes}')">Update</button></a></td>
@@ -53,6 +53,8 @@ function editClient(id, firstName, lastName, email, phone, notes) {
     document.getElementById('email').value = email;
     document.getElementById('phone').value = phone;
     document.getElementById('notes').value = notes;
+    console.log(id, firstName, lastName, email, phone, notes);
+
 
     document.getElementById('updateForm').addEventListener("submit", function (e) {
         e.preventDefault();

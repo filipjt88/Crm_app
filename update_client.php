@@ -3,11 +3,11 @@ require 'core/db.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'], $_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['phone'], $_POST['notes'])) {
     $id = $_POST['id'];
-    $first_name = trim($_POST['first_name']);
-    $last_name  = trim($_POST['last_name']);
-    $email      = trim($_POST['email']);
-    $phone      = trim($_POST['phone']);
-    $notes      = trim($_POST['notes']);
+    $first_name = $_POST['first_name'];
+    $last_name  = $_POST['last_name'];
+    $email      = $_POST['email'];
+    $phone      = $_POST['phone'];
+    $notes      = $_POST['notes'];
 
     $stmt = $pdo->prepare("SELECT id FROM clients WHERE id = ?");
     $stmt->execute([$id]);
