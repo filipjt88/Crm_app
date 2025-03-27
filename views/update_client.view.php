@@ -13,14 +13,14 @@
         <div class="row">
             <div class="col-md-9 offset-1 mt-5">
                 <h1 class="text-center mb-5">Update client</h1>
-                <form id="updateForm" method="POST">
-                    <input type="hidden" id="clientId">
+                <form action="../update_client.php" id="updateForm" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $client['id']; ?>">
                     <input type="text" id="firstName" name="first_name" class="form-control" placeholder="First name ..." required><br>
                     <input type="text" id="lastName" name="last_name" class="form-control" placeholder="Last name ..." required><br>
                     <input type="email" id="email" name="email" class="form-control" placeholder="Email ..." required><br>
                     <input type="text" id="phone" name="phone" class="form-control" placeholder="First name ..." required><br>
                     <textarea name="notes" id="notes" class="form-control" placeholder="Notes . . ." required></textarea><br>
-                    <button type="submit" class="form-control btn-sm btn btn-success">Update</button>
+                    <button type="submit" onclick="updateClient()" class="form-control btn-sm btn btn-success">Update</button>
                 </form>
             </div>
         </div>

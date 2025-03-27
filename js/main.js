@@ -1,6 +1,6 @@
 // Load clients
 function loadClients() {
-    fetch('./get_clients.php')
+    fetch('get_clients.php')
         .then(response => response.json())
         .then(data => {
             let tableBody = document.getElementById("clientsTable");
@@ -13,7 +13,7 @@ function loadClients() {
                         <td>${client.email}</td>3
                         <td>${client.phone}</td>
                         <td>${client.notes}</td>
-                        <td><a href="./views/update_client.view.php" class="link-opacity-10" href="#"><button class="btn-sm btn btn-warning" onclick="editClient(${client.id}, '${client.first_name}', '${client.last_name}', '${client.email}', '${client.phone}', '${client.notes}')">Update</button></a></td>
+                        <td><a href="./views/update_client.view.php" class="link-opacity-10"><button class="btn-sm btn btn-warning" onclick="editClient(${client.id}, '${client.first_name}', '${client.last_name}', '${client.email}', '${client.phone}', '${client.notes}')">Update</button></a></td>
                         <td><button class="btn btn-danger btn-sm" onclick="deleteClient(${client.id})">Delete</button></td>
                     </tr>
                 `;
@@ -52,7 +52,6 @@ function editClient(id, firstName, lastName, email, phone, notes) {
     document.getElementById('email').value = email;
     document.getElementById('phone').value = phone;
     document.getElementById('notes').value = notes;
-    console.log(id, firstName, lastName, email, phone, notes);
 
 
     document.getElementById('updateForm').addEventListener("submit", function (e) {
@@ -64,6 +63,7 @@ function editClient(id, firstName, lastName, email, phone, notes) {
         let phone = document.getElementById('phone').value;
         let notes = document.getElementById('notes').value;
 
+        updateForm.style.display = 'block';
 
         fetch('update_client.php', {
             method: "POST",
