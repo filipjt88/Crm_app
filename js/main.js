@@ -1,7 +1,6 @@
-
 // Load clients
 function loadClients() {
-    fetch('get_clients.php')
+    fetch('./get_clients.php')
         .then(response => response.json())
         .then(data => {
             let tableBody = document.getElementById("clientsTable");
@@ -86,3 +85,6 @@ function editClient(id, firstName, lastName, email, phone, notes) {
 }
 
 window.onload = loadClients;
+document.addEventListener("DOMContentLoaded", function () {
+    loadClients();
+});
