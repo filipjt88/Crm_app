@@ -2,19 +2,6 @@
 
 require '../core/db.php';
 
-$id = $_GET['id'] ?? null;
-if (!$id) {
-    die("Nevažeći ID");
-}
-
-$sql = "SELECT * FROM clients WHERE id = :id";
-$stmt = $pdo->prepare($sql);
-$stmt->execute(['id' => $id]);
-$client = $stmt->fetch(PDO::FETCH_ASSOC);
-
-if (!$client) {
-    die("Klijent nije pronađen.");
-}
 
 ?>
 <!DOCTYPE html>
