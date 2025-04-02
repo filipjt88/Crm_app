@@ -24,7 +24,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Prijavi se</button>
                     </form>
-                    <p class="text-center mt-3">Nemate nalog? <a href="register.php">Registrujte se</a></p>
+                    <p class="text-center mt-3">Nemate nalog? <a href="register.view.php">Registrujte se</a></p>
                 </div>
             </div>
         </div>
