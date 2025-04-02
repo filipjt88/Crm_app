@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../core/db.php';
+require 'core/db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST['email']);
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../views/dashboard.php");
         exit();
     } else {
-        echo "Neispravni podaci. <a href='../views/login.php'>Pokušajte ponovo</a>";
+        echo "Neispravni podaci. <a href='views/login.view.php'>Pokušajte ponovo</a>";
     }
 }
 ?>
