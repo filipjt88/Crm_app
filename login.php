@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['user_role'] = $user['role'];
 
         // Redirekcija na dashboard
-        header("Location:views/dashboard.view.php");
+        header("Location:views/index.view.php");
         exit();
     } else {
         echo "Neispravni podaci. <a href='views/login.view.php'>Pokušajte ponovo</a>";
