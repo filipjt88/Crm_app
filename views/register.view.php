@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 <div class="card shadow-lg p-4">
                     <h2 class="text-center">Registracija</h2>
-                    <form action="../register.php" method="POST">
+                    <form action="../controller/register.php" method="POST">
                         <div class="mb-3">
                             <label class="form-label">Ime</label>
                             <input type="text" name="name" class="form-control" required>
