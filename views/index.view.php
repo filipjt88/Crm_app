@@ -17,6 +17,7 @@ if (!isset($_SESSION['user_id'])) {
     <div class="container text-center">
         <h1>Dobrodošao, <?php echo htmlspecialchars($_SESSION['user_name']); ?>!</h1>
         <p>Uloga: <?php echo htmlspecialchars($_SESSION['user_role']); ?></p>
+        
         <a href="../controller/logout.php" class="btn btn-danger">Odjava</a>
     </div>
 </body>
