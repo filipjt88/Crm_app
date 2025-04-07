@@ -13,7 +13,7 @@
             <div class="col-md-5">
                 <div class="card shadow-lg p-4">
                     <h2 class="text-center">Prijava</h2>
-                    <form action="../login.php" method="POST">
+                    <form action="../controller/login.php" method="POST">
                         <div class="mb-3">
                             <label class="form-label">Email</label>
                             <input type="email" name="email" class="form-control" required>

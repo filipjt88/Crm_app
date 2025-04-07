@@ -1,5 +1,5 @@
 <?php
-require 'core/db.php';
+require '../core/db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = trim($_POST['name']);

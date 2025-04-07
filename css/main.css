@@ -8,7 +8,3 @@
     --light: #fff;
     --dark: #000;
 }
-
-body {
-    background: linear-gradient(90deg, rgba(115, 90, 255, 0.9444152661064426) 36%, rgba(63, 176, 195, 1) 92%);
-}
