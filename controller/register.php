@@ -4,7 +4,8 @@ require 'core/db.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = trim($_POST['name']);
     $email = trim($_POST['email']);
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hashiranje lozinke
+    // Heshiranje lozinke
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $role = $_POST['role'];
 
     // Provera da li email već postoji
