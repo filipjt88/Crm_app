@@ -14,3 +14,18 @@ $stmt = $pdo->prepare("SELECT * FROM clients WHERE user_id = ?");
 $stmt->execute([$user_id]);
 $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
+<?php require '../parts/top.php'; ?>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <h2 class="text-center">Lista klijenata</h2>
+                <a href="add.client.php" class="btn btn-primary mb-3">Dodaj klijenta</a>
+                <table class="table table-bordered"></table>
+            </div>
+        </div>
+    </div>
+
+
+<?php require '../parts/bottom.php'; ?>
