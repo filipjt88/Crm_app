@@ -22,7 +22,27 @@ $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="col-md-6 offset-3">
                 <h2 class="text-center">Lista klijenata</h2>
                 <a href="add.client.php" class="btn btn-primary mb-3">Dodaj klijenta</a>
-                <table class="table table-bordered"></table>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Ime</th>
+                            <th>Email</th>
+                            <th>Telefon</th>
+                            <th>Kompanija</th>
+                            <th>Akcija</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($clients as $client): ?>
+                            <tr>
+                                <td><?php htmlspecialchars($client['name']); ?></td>
+                                <td><?php htmlspecialchars($client['email']); ?></td>
+                                <td><?php htmlspecialchars($client['phone']); ?></td>
+                                <td><?php htmlspecialchars($client['company']); ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
