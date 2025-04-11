@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'core/connection.php'; 
+require_once '../core/db.php.php'; 
 
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
@@ -14,7 +14,6 @@ $email = trim($_POST['email']);
 $phone = trim($_POST['phone'] ?? '');
 $company = trim($_POST['company'] ?? '');
 
-// Validacija (osnovna)
 $errors = [];
 
 if (empty($name)) $errors[] = "Ime je obavezno.";
@@ -29,9 +28,8 @@ if (count($errors) > 0) {
     exit;
 }
 
-// Ubacivanje u bazu
 $stmt = $pdo->prepare("INSERT INTO clients (user_id, name, email, phone, company) VALUES (?, ?, ?, ?, ?)");
 $stmt->execute([$user_id, $name, $email, $phone, $company]);
 
-header('Location: clients.php');
+header('Location: ../views/clients.view.php');
 exit;
