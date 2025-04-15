@@ -20,4 +20,5 @@ if (!isset($_SESSION['user_id'])) {
     </div>
 
 
+
 <?php include '../parts/bottom.php'; ?>

@@ -39,7 +39,7 @@ if (!$client) {
             <input type="hidden" name="id" value="<?= $client['id'] ?>">
 
             <div class="mb-3">
-                <label class="form-label">Ime i prezime *</label>
+                <label class="form-label">Ime i prezime</label>
                 <input type="text" name="name" class="form-control" value="<?= htmlspecialchars($client['name']) ?>" required>
             </div>
 
