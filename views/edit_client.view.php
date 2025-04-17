@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'core/connection.php';
+require_once '../core/db.php';
 
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
@@ -35,7 +35,7 @@ if (!$client) {
 <body class="p-4">
     <div class="container">
         <h2>Izmeni klijenta</h2>
-        <form action="update_client.php" method="POST">
+        <form action="../controller/edit_client.php" method="POST">
             <input type="hidden" name="id" value="<?= $client['id'] ?>">
 
             <div class="mb-3">
