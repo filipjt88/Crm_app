@@ -8,16 +8,16 @@ if (!isset($_SESSION['user_id'])) {
 
 require '../parts/top.php';
 
-if (!isset($_GET['id'])) {
+if (!isset($_GET['user_id'])) {
     die('Client ID is missing.');
 }
 
-$clientId = $_GET['id'];
+$user_id = $_GET['user_id'];
 
 // Priprema za izvršavanje DELETE upita
 try {
     $stmt = $pdo->prepare("DELETE FROM clients WHERE id = :id");
-    $stmt->execute(['id' => $clientId]);
+    $stmt->execute(['id' => $user_id]);
 
     // Redirekcija nazad na listu klijenata
     header("Location: clients_list.php?msg=deleted");
