@@ -14,7 +14,7 @@ if (!isset($_GET['id'])) {
 
 $clientId = $_GET['id'];
 
-// Priprema i izvršavanje DELETE upita
+// Priprema za izvršavanje DELETE upita
 try {
     $stmt = $pdo->prepare("DELETE FROM clients WHERE id = :id");
     $stmt->execute(['id' => $clientId]);

@@ -33,7 +33,7 @@ $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <th>Email</th>
                             <th>Telefon</th>
                             <th>Kompanija</th>
-                            <th>Akcija</th>
+                            <th colspan="2">Akcija</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -43,6 +43,8 @@ $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <td><?php echo htmlspecialchars($client['email']); ?></td>
                                 <td><?php echo htmlspecialchars($client['phone']); ?></td>
                                 <td><?php echo htmlspecialchars($client['company']); ?></td>
+                                <td><button class="btn-sm btn btn-danger">Delete</button></td>
+                                <td><button class="btn-sm btn btn-warning">Edit</button></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
