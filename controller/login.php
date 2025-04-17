@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location:../views/index.view.php");
         exit();
     } else {
-        echo "Neispravni podaci. <a href='views/login.view.php'>Pokušajte ponovo</a>";
+        echo "Neispravni podaci. <a href='../views/login.view.php'>Pokušajte ponovo</a>";
     }
 }
 ?>
