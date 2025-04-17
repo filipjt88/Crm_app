@@ -25,7 +25,7 @@ $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="row">
             <div class="col-md-6 offset-3">
                 <h2 class="text-center">Lista klijenata</h2>
-                <a href="add.client.php" class="btn btn-primary mb-3">Dodaj klijenta</a>
+                <a href="../controller/add_client.php" class="btn btn-primary mb-3">Dodaj klijenta</a>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -39,10 +39,10 @@ $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <tbody>
                         <?php foreach ($clients as $client): ?>
                             <tr>
-                                <td><?php htmlspecialchars($client['name']); ?></td>
-                                <td><?php htmlspecialchars($client['email']); ?></td>
-                                <td><?php htmlspecialchars($client['phone']); ?></td>
-                                <td><?php htmlspecialchars($client['company']); ?></td>
+                                <td><?php echo htmlspecialchars($client['name']); ?></td>
+                                <td><?php echo htmlspecialchars($client['email']); ?></td>
+                                <td><?php echo htmlspecialchars($client['phone']); ?></td>
+                                <td><?php echo htmlspecialchars($client['company']); ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
