@@ -44,7 +44,7 @@ $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <td><?php echo htmlspecialchars($client['phone']); ?></td>
                                 <td><?php echo htmlspecialchars($client['company']); ?></td>
                                 <td><a href="../controller/delete_client.php" class="btn-sm btn btn-danger">Delete</a></td>
-                                <td><a class="btn-sm btn btn-warning">Edit</a></td>
+                                <td><a href="../views/edit_client.view.php" class="btn-sm btn btn-warning">Edit</a></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

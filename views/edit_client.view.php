@@ -11,7 +11,7 @@ $user_id = $_SESSION['user_id'];
 $client_id = $_GET['id'] ?? null;
 
 if (!$client_id) {
-    header('Location: clients.php');
+    header('Location: ../controller/store_client.php');
     exit;
 }
 
