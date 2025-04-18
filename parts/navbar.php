@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="mx-auto navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Pocetna</a>
+          <a class="nav-link active" aria-current="page" href="../views/index.view.php">Pocetna</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="register.view.php">Registracija</a>

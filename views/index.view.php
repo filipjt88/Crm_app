@@ -1,5 +1,5 @@
 <?php
-$title = "Home page";
+$title = "Home";
 include '../parts/top.php';
 session_start();
 if (!isset($_SESSION['user_id'])) {
