@@ -20,10 +20,11 @@ $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <?php require '../parts/top.php'; ?>
+<?php include '../parts/navbar.php'; ?>
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6 offset-3">
+            <div class="col-md-6 offset-3 mt-5">
                 <h2 class="text-center">Lista klijenata</h2>
                 <a href="../controller/add_client.php" class="btn btn-primary mb-3">Dodaj klijenta</a>
                 <table class="table table-bordered">
