@@ -12,4 +12,6 @@ if (!isset($_SESSION['user_id'])) {
 
 
 
+
+
 <?php include '../parts/bottom.php'; ?>
