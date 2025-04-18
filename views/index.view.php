@@ -9,13 +9,34 @@ if (!isset($_SESSION['user_id'])) {
 ?>
     <div class="container text-center">
         <div class="row">
-            <div class="col-md-6 offset-3 mt-5">
-                <section class="user">
-                <h1>Dobrodošao, <?php echo htmlspecialchars($_SESSION['user_name']); ?>!</h1>
-        <span>Uloga: <?php echo htmlspecialchars($_SESSION['user_role']); ?></span>
-        <a href="../controller/logout.php" class="btn btn-sm btn-danger">Odjava</a>
-                </section>
-            </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">CRM APP</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="mx-auto navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Pocetna</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.view.php">Registracija</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.view.php">Logovanje</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="clients.view.php">Klijenti</a>
+        </li>
+        <li class="nav-item">
+        </li>
+      </ul>
+      <a class="navbar-brand" href="#">Korisnik: <?php echo htmlspecialchars($_SESSION['user_name']); ?></a>
+      <a href="../controller/logout.php" class="nav-link">Odjava</a>
+    </div>
+  </div>
+</nav>
         </div>
     </div>
 
