@@ -26,6 +26,8 @@ if (!$client) {
 }
 ?>
 
+
+    <?php include '../parts/top.php'; ?>
     <?php include '../parts/navbar.php'; ?>
     <div class="container">
         <h2>Izmeni klijenta</h2>
@@ -56,3 +58,5 @@ if (!$client) {
             <a href="clients.php" class="btn btn-secondary">Nazad</a>
         </form>
     </div>
+
+    <?php include '../parts/bottom.php'; ?>
