@@ -2,8 +2,8 @@
 <?php require '../core/db.php'; ?>
 <?php require '../parts/top.php'; ?>
 <?php require '../parts/navbar.php'; ?>
-    <div class="container d-flex align-items-center justify-content-center vh-100">
-        <div class="row justify-content-center">
+
+        <div class="row justify-content-center mt-5">
             <div class="col-md-6">
                 <div class="card shadow-lg p-4">
                     <h2 class="text-center">Registracija</h2>
@@ -32,6 +32,5 @@
                 </div>
             </div>
         </div>
-    </div>
 <?php require '../parts/bottom.php'; ?>
 

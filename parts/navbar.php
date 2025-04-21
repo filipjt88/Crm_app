@@ -23,7 +23,7 @@
         <li class="nav-item">
         </li>
       </ul>
-      <a class="navbar-brand" href="#">Korisnik: <?php echo htmlspecialchars($_SESSION['user_name']); ?></a>
+      <a class="navbar-brand" href="#"></a>
       <a href="../controller/logout.php" class="nav-link">Odjava</a>
     </div>
   </div>
