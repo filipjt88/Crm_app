@@ -1,4 +1,5 @@
 <?php
+$title = 'Edit';
 session_start();
 require_once '../core/db.php';
 
