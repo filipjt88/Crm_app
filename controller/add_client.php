@@ -7,6 +7,7 @@ if (!isset($_SESSION['user_id'])) {
 ?>
 
 <?php include '../parts/top.php'; ?>
+<?php include '../parts/navbar.php'; ?>
 
 <div class="container mt-5">
         <h2 class="text-center">Dodaj novog klijenta</h2>

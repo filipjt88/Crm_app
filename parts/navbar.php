@@ -20,8 +20,6 @@
         <li class="nav-item">
           <a class="nav-link" href="clients.view.php">Klijenti</a>
         </li>
-        <li class="nav-item">
-        </li>
       </ul>
       <a class="navbar-brand" href="#"></a>
       <a href="../controller/logout.php" class="nav-link">Odjava</a>
