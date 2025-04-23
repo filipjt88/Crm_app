@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_id'])) {
 <?php include '../parts/navbar.php'; ?>
 
 <div class="container mt-5">
-        <h2 class="text-center">Dodaj novog klijenta</h2>
+        <h2 class="text-center">Dodaj novog klijenta</h2>             
         <div class="row">
             <div class="col-md-6 offset-3">
             <form action="store_client.php" method="POST">
@@ -39,7 +39,7 @@ if (!isset($_SESSION['user_id'])) {
         </form>
             </div>
         </div>
-    </div>
+</div>
 
 <?php include '../parts/bottom.php'; ?>
 
