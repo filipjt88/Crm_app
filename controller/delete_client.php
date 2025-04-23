@@ -19,7 +19,7 @@ try {
     $stmt = $pdo->prepare("DELETE FROM clients WHERE id = :id");
     $stmt->execute(['id' => $user_id]);
 
-    // Redirekcija nakon uspešnog brisanja
+    // Redirekcija na stranicu nakon uspešnog brisanja
     header("Location: store_client.php?msg=deleted");
     exit;
 } catch (PDOException $e) {

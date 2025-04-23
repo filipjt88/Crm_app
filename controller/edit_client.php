@@ -20,7 +20,7 @@ if (!$id || empty($name) || empty($email)) {
     exit;
 }
 
-// Provera da li klijent pripada korisniku
+// Provera u bazi podataka da li klijent pripada korisniku
 $check = $pdo->prepare("SELECT * FROM clients WHERE id = ? AND user_id = ?");
 $check->execute([$id, $user_id]);
 $existing = $check->fetch();
@@ -30,7 +30,7 @@ if (!$existing) {
     exit;
 }
 
-// Ažuriranje u bazi
+// Ažuriranje u bazi podataka
 $stmt = $pdo->prepare("UPDATE clients SET name = ?, email = ?, phone = ?, company = ? WHERE id = ? AND user_id = ?");
 $stmt->execute([$name, $email, $phone, $company, $id, $user_id]);
 

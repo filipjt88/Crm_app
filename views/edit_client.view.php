@@ -32,6 +32,7 @@ if (!$client) {
     <?php include '../parts/navbar.php'; ?>
     <div class="container">
         <h2>Izmeni klijenta</h2>
+        <!-- Forma edit klijent -->
         <form action="../controller/edit_client.php" method="POST">
             <input type="hidden" name="id" value="<?= $client['id'] ?>">
 
@@ -58,6 +59,8 @@ if (!$client) {
             <button type="submit" class="btn btn-primary">Sačuvaj izmene</button>
             <a href="clients.php" class="btn btn-secondary">Nazad</a>
         </form>
+        <!-- Kraj forme edit klijent -->
+
     </div>
 
     <?php include '../parts/bottom.php'; ?>

@@ -9,10 +9,12 @@ if (!isset($_SESSION['user_id'])) {
 <?php include '../parts/top.php'; ?>
 <?php include '../parts/navbar.php'; ?>
 
+
 <div class="container mt-5">
         <h2 class="text-center">Dodaj novog klijenta</h2>             
         <div class="row">
             <div class="col-md-6 offset-3">
+                <!-- Forma -->
             <form action="store_client.php" method="POST">
             <div class="mb-3">
                 <label for="name" class="form-label">Ime i prezime *</label>
@@ -37,6 +39,7 @@ if (!isset($_SESSION['user_id'])) {
             <button type="submit" class="btn btn-success">Sačuvaj</button>
             <a href="clients.php" class="btn btn-secondary">Nazad</a>
         </form>
+        <!-- Kraj Forme -->
             </div>
         </div>
 </div>

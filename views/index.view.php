@@ -25,6 +25,7 @@ $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <div class="container">
         <div class="row">
+            <!-- Lista klijenta -->
             <div class="col-md-6 offset-3 mt-5">
                 <h2 class="text-center">Lista klijenata</h2>
                 <a href="../controller/add_client.php" class="btn btn-primary mb-3">Dodaj klijenta</a>
@@ -52,6 +53,7 @@ $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     </tbody>
                 </table>
             </div>
+            <!-- Kraj liste klijenta -->
         </div>
     </div>
 
