@@ -2,6 +2,7 @@
 
 require_once '../core/db.php';
 session_start();
+// Korisnik mora biti logovan
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit;
