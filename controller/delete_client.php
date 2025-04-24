@@ -1,12 +1,12 @@
 <?php
 require_once '../core/db.php';
 session_start();
+// Korisnik mora biti logovan
 if (!isset($_SESSION['user_id'])) {
     header('Location: ../controller/login.php');
     exit;
 }
 
-require '../parts/top.php';
 
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     die('Client ID is missing or invalid.');
