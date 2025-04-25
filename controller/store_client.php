@@ -29,6 +29,7 @@ if (count($errors) > 0) {
     exit;
 }
 
+// Kreiranje klijenta u bazi podataka
 $stmt = $pdo->prepare("INSERT INTO clients (user_id, name, email, phone, company) VALUES (?, ?, ?, ?, ?)");
 $stmt->execute([$user_id, $name, $email, $phone, $company]);
 
