@@ -18,9 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Registracija korisnika u bazi podataka
     $stmt = $pdo->prepare("INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)");
     if ($stmt->execute([$name, $email, $password, $role])) {
-        echo "Uspešno registrovan! <a href='../views/login.view.php'>Prijavi se</a>";
+        echo "Uspešno ste registrovani! <a href='../views/login.view.php'>Prijavi se</a>";
     } else {
-        echo "Došlo je do greške.";
+        echo "Ups, došlo je do greške.";
     }
 }
 ?>

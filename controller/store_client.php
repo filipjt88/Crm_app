@@ -19,13 +19,13 @@ $errors = [];
 
 if (empty($name)) $errors[] = "Ime je obavezno.";
 if (empty($email)) $errors[] = "Email je obavezan.";
-elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Neispravan email.";
+elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Neispravan email, pokusajte ponovo!";
 
 if (count($errors) > 0) {
     foreach ($errors as $error) {
         echo "<p style='color:red;'>$error</p>";
     }
-    echo "<p><a href='add_client.php'>Nazad</a></p>";
+    echo "<p><a href='add_client.php'>Nazad na stranicu</a></p>";
     exit;
 }
 
