@@ -35,5 +35,5 @@ if (!$existing) {
 $stmt = $pdo->prepare("UPDATE clients SET name = ?, email = ?, phone = ?, company = ? WHERE id = ? AND user_id = ?");
 $stmt->execute([$name, $email, $phone, $company, $id, $user_id]);
 
-header("Location: clients.php");
+header("Location: store_client.php");
 exit;
