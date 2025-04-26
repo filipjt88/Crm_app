@@ -33,5 +33,5 @@ if (count($errors) > 0) {
 $stmt = $pdo->prepare("INSERT INTO clients (user_id, name, email, phone, company) VALUES (?, ?, ?, ?, ?)");
 $stmt->execute([$user_id, $name, $email, $phone, $company]);
 
-header('Location: ../views/clients.view.php');
+header('Location: ../views/index.view.php');
 exit;

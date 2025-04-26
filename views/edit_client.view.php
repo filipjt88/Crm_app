@@ -57,7 +57,7 @@ if (!$client) {
             </div>
 
             <button type="submit" class="btn btn-primary">Sačuvaj izmene</button>
-            <a href="clients.php" class="btn btn-secondary">Nazad</a>
+            <a href="../views/index.view.php" class="btn btn-secondary">Nazad</a>
         </form>
         <!-- Kraj forme edit klijent -->
 
