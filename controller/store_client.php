@@ -35,3 +35,4 @@ $stmt->execute([$user_id, $name, $email, $phone, $company]);
 
 header('Location: ../views/index.view.php');
 exit;
+?>
