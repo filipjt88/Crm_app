@@ -16,7 +16,7 @@ if (!isset($_SESSION['user_id'])) {
         <div class="row">
             <div class="col-md-6 offset-3">
                 <!-- Forma -->
-            <form action="store_client.php" method="POST">
+            <form action="../controller/store_client.php" method="POST">
             <div class="mb-3">
                 <label for="name" class="form-label">Ime i prezime *</label>
                 <input type="text" name="name" id="name" class="form-control" required>
