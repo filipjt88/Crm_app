@@ -37,3 +37,5 @@ $stmt->execute([$name, $email, $phone, $company, $id, $user_id]);
 
 header("Location: store_client.php");
 exit;
+
+?>
