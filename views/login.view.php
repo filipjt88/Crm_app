@@ -1,4 +1,5 @@
 <?php $title = 'Login'; ?>
+
 <?php require '../core/db.php'; ?>
 <?php require '../parts/top.php'; ?>
 <?php require '../parts/navbar.php'; ?>
